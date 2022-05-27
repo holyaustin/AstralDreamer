@@ -17,12 +17,7 @@ const data = [
     title: 'Alexandra',
     designation: 'Creative. Editorial, Community Manager, Problem Solver.',
     socialProfile: [
-      {
-        id: 1,
-        name: 'facebook',
-        path: '#',
-        icon: <FaFacebookF />,
-      },
+
       {
         id: 2,
         name: 'twitter',
@@ -44,12 +39,7 @@ const data = [
     title: 'Apolonia',
     designation: 'Creative, Consultant, Engineer, Community Manager, Outreach/Research.',
     socialProfile: [
-      {
-        id: 1,
-        name: 'facebook',
-        path: '#',
-        icon: <FaFacebookF />,
-      },
+
       {
         id: 2,
         name: 'twitter',
@@ -71,12 +61,7 @@ const data = [
     title: 'James',
     designation: 'Creative. Digital Architect. Visionary. Artistic Innovator. MetaVerse Mastermind.',
     socialProfile: [
-      {
-        id: 1,
-        name: 'facebook',
-        path: '#',
-        icon: <FaFacebookF />,
-      },
+
       {
         id: 2,
         name: 'twitter',
@@ -100,7 +85,7 @@ export default function TeamSection() {
       <Container>
         <SectionHeader
           slogan="our team"
-          title="Our qualified and talented team members"
+          title="Connect with us on social media"
         />
 
         <Grid sx={styles.grid}>

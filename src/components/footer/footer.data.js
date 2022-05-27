@@ -35,15 +35,15 @@ export default {
       label: 'Home',
     },
     {
-      path: '/',
+      path: 'core-feature',
       label: 'About',
     },
     {
-      path: '/',
+      path: 'mental-health',
       label: 'Collections',
     },
     {
-      path: '/',
+      path: 'mailto:astraldreamersnft@gmail.com',
       label: 'Contact',
     },
   ],

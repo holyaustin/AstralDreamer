@@ -67,8 +67,8 @@ const FAQ = () => {
       <Container sx={styles.accordion.container}>
         <BlockTitle
           sx={styles.accordion.blockTitle}
-          tagline="Frequent Question"
-          heading="Do you have any question?"
+          tagline="FAQs"
+          heading="What are some of your curiosities?"
         />
         <Accordion items={accordionData} />
       </Container>

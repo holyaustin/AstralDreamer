@@ -8,7 +8,7 @@ export default [
     label: 'About',
   },
   {
-    path: 'service-section',
+    path: 'mental-health',
     label: 'Collections',
   },
   {

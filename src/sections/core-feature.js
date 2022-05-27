@@ -3,12 +3,12 @@ import { jsx, Container, Box } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 import Image from 'components/image';
 
-import FeatureThumb from 'assets/astradreamer/aereon.png';
+import FeatureThumb from 'assets/astradreamer/metaverse.gif';
 //import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
   subTitle: 'About',
-  title: 'About Astral Dreamers',
+  title: '',
   description:
     'We are a team of digital creators. Our focus is interactive & immersive experience design. We have been working in the field of art & design for as long as we can remember. However, it wasn’t until the beginning of 2021, that we decided to travel deeper into the world of new media art.',
   description2:

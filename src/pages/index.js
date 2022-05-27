@@ -27,7 +27,6 @@ export default function IndexPage() {
           <Banner />
           <CoreFeature />
           <MentalHealth  />
-          <ServiceSection />
           <TeamSection />
           <Faq />
 
