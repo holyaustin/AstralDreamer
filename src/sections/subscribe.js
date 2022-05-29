@@ -19,7 +19,6 @@ export default function Subscribe() {
     let data = {
       fullname,
       email,
-      // subject,
       message
     }
     console.log('past data');
