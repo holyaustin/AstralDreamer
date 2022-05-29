@@ -26,19 +26,20 @@ export default function IndexPage() {
           <SEO title="Age of Astral Dreamers" />
           <Banner />
           <CoreFeature />
-          <MentalHealth  />
           <TeamSection />
           <Faq />
+          <Subscribe />
 
           {/**
           <KeyFeature />
+          <MentalHealth  />
           <ServiceSection />
           <Feature />
           <WorkFlow />
           <Package />
           <TestimonialCard />
           <BlogSection />
-           <Subscribe />
+
            */}
         </Layout>
       </StickyProvider>

@@ -31,19 +31,19 @@ export default {
   ],
   menuItem: [
     {
-      path: '/',
+      path: '#',
       label: 'Home',
     },
     {
-      path: 'core-feature',
+      path: '#',
       label: 'About',
     },
     {
-      path: 'mental-health',
-      label: 'Collections',
+      path: '#',
+      label: 'Team',
     },
     {
-      path: 'mailto:astraldreamersnft@gmail.com',
+      path: '#',
       label: 'Contact',
     },
   ],

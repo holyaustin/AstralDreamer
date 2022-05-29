@@ -80,7 +80,7 @@ const styles = {
     '&.sticky': {
       position: 'fixed',
       backgroundColor: 'background',
-      color: '#db8f0b',
+      color: 'secondary',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
       py: 3,
       'nev > a': {

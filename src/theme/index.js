@@ -10,7 +10,7 @@ export default {
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
     yellow: '#FFA740', // border color
-    primary: '#EA3A60', // primary button and link color
+    primary: '#800080', // primary button and link color
     secondary: '#2563FF', // secondary color - can be used for hover states
     muted: '#E4E4E4', // muted color
     accent: '#609', // a contrast color for emphasizing UI
@@ -96,7 +96,7 @@ export default {
       pb: [8, null, 9, null, null, 10, null, '170px'],
     },
     coreFeature: {
-      pb: [8, null, 9, null, null, 10, null, '170px'],
+      pb: [8, null, 9, null, null, 10, null, '30px'],
       overflow: 'hidden',
     },
     testimonial: {
@@ -247,7 +247,7 @@ export default {
     // you can reference other values defined in the theme
     defaultBtn: {
       borderRadius: '45px',
-      fontSize: ['14px', null, null, 2],
+      fontSize: ['16px', null, null, 2],
       letterSpacings: '-0.15px',
       padding: ['12px 20px', null, '15px 30px'],
       fontFamily: 'body',
@@ -326,10 +326,24 @@ export default {
     label: {
       fontSize: 1,
       fontWeight: 'bold',
+      fontSize: ['16px', null, null, 2],
     },
     input: {
       borderRadius: 8,
       borderColor: 'border_color',
+      fontWeight: 'bold',
+      height: 60,
+      '&:focus': {
+        borderColor: 'primary',
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
+    },
+    textarea: {
+      borderRadius: 8,
+      borderColor: 'border_color',
+      fontWeight: 'bold',
+      fontSize: ['16px', null, null, 2],
       height: 60,
       '&:focus': {
         borderColor: 'primary',

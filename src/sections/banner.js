@@ -22,16 +22,16 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-          <br/> <br/>
+          <br/> 
           </Heading>
           <Text as="p" variant="heroSecondary">
-          <br/> <br/><br/><br/><br/><br/><br/>
+          <br/> <br/><br/>
           </Text>
           <a href="https://discord.gg/sP46VbawdS" target="_blank">
           <Button variant="primary">Join Community</Button>
           </a>
-          <br/><br/><br/><br/><br/>
-          <br/>
+          <br/><br/><br/>
+         
         </Box>
 
         <Box sx={styles.thumbnail}>
@@ -198,7 +198,7 @@ const styles = {
   contentBox: {
     width: ['100%', null, null, 315, 390, 450, null, 500],
     flexShrink: 0,
-    mb: [7, null, 60, 0],
+    mb: [2, null, 60, 0],
     textAlign: ['center', null, null, 'left'],
   },
   grid: {

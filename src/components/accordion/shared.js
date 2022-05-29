@@ -7,7 +7,7 @@ export const AccordionButton = ({ children, ...rest }) => (
     css={{
       display: 'flex',
       alignItems: 'center',
-      color: '#db8f0b',
+      color: '#2563FF',
       cursor: 'pointer',
       fontSize: '20px',
       fontWeight: '500',
@@ -30,7 +30,7 @@ export const AccordionButton = ({ children, ...rest }) => (
         top: '50%',
         left: '0px',
         transform: 'translateY(-50%)',
-        backgroundColor: '#3FDBB1',
+        backgroundColor: '#800080',
         width: '20px',
         height: '20px',
         display: 'flex',
@@ -74,7 +74,7 @@ export function AccordionContents({ isOpen, ...props }) {
         fontSize: 20,
         paddingLeft: 32,
         lineHeight: '30px',
-        color: '#ffffff',
+        color: '#fff',
         '@media(min-width: 768px)': {
           paddingLeft: 45,
           lineHeight: '32px',

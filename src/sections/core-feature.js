@@ -13,8 +13,8 @@ const data = {
     'We are a team of digital creators. Our focus is interactive & immersive experience design. We have been working in the field of art & design for as long as we can remember. However, it wasn’t until the beginning of 2021, that we decided to travel deeper into the world of new media art.',
   description2:
     'When Facebook changed its name to Meta, together we became inspired to explore new ways for interactivity. This has been by far one of our most special projects, because it allows us to create a new user experience. We like to think of those new systems as a way for us to connect to something universal while questioning reality at the same time. We are excited for you to join us as we launch our first NFT collection. Buckle up as we take a mind trip...',
-  btnName: 'Get Started',
-  btnURL: 'https://opensea.io/astraldreamers',
+  btnName: 'Join Community',
+  btnURL: 'https://discord.gg/Jv78PKNgfq',
 };
 
 export default function CoreFeature() {
@@ -57,7 +57,7 @@ const styles = {
     color: '#92a8d1',
     textAlign: ['center', null, null, 'left'],
     width: ['100%', '80%', null, 340, 400, 430, null, 485],
-    pb: ['50px', '60px', null, 0],
+    pb: ['10px', '20px', null, 0],
     mx: ['auto', null, null, 0],
     '.description': {
       pr: [0, null, 6, 7, 6],

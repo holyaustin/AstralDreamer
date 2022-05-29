@@ -8,10 +8,6 @@ export default [
     label: 'About',
   },
   {
-    path: 'mental-health',
-    label: 'Collections',
-  },
-  {
     path: 'team-section',
     label: 'Team',
   },
@@ -19,5 +15,8 @@ export default [
     path: 'faq',
     label: 'FAQ',
   },
-
+  {
+    path: 'subscribe',
+    label: 'Contact Us',
+  },
 ];

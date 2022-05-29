@@ -1,122 +1,85 @@
 /** @jsx jsx */
 import { useRef, useState } from 'react';
+// import styles from "../styles/Home.module.css"
 import fetch from 'isomorphic-unfetch';
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Button, Input, Text, Heading } from 'theme-ui';
 
 export default function Subscribe() {
-  // 1. Create a reference to the input so we can fetch/clear it's value.
-  const inputEl = useRef(null);
-  // 2. Hold a status in state to handle the response from our API.
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null },
-  });
-  const handleMailChimpResponse = (errorMsg, successMsg) => {
-    if (errorMsg) {
-      // 4. If there was an error, update the message in state.
-      setStatus({
-        info: { error: true, msg: errorMsg },
-      });
+  const [fullname, setFullname] = useState('')
+  const [email, setEmail] = useState('')
+  //const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
-      return;
+  const handleSubmit = (e) => { 
+    e.preventDefault()
+    console.log('Sending')
+    
+    let data = {
+      fullname,
+      email,
+      // subject,
+      message
     }
+    console.log('past data');
 
-    // 5. Clear the input value and show a success message.
-    setStatus({
-      submitted: true,
-      submitting: false,
-      info: { error: false, msg: successMsg },
-    });
-    inputEl.current.value = '';
-  };
+    fetch('api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then((res) => {
+          console.log('Response received')
+          if (res.status === 200) {
+              console.log('Response succeeded!')
+              setSubmitted(true) 
+              setFullname('')
+              setEmail('')
+              setMessage('')
+          }
+      })
+      console.log('past fetch');
+    };
 
-  const handleSendGridResponse = (status, msg) => {
-    if (status === 200) {
-      // 5. Clear the input value and show a success message.
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: msg },
-      });
-      inputEl.current.value = '';
-    } else {
-      setStatus({
-        info: { error: true, msg: msg },
-      });
-    }
-  };
-  const subscribe = async (e) => {
-    e.preventDefault();
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-
-    // 3. Send a request to our API with the user's email address.
-    const res = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email: inputEl.current.value,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
-    //for mailChimp integration
-    const { error } = await res.json();
-    handleMailChimpResponse(
-      error,
-      'Success! 🎉 You are now subscribed to the newsletter.'
-    );
-    // For sendGrid integration
-    const text = await res.text();
-    handleSendGridResponse(res.status, text);
-  };
   return (
-    <section>
+    <section id="subscribe">
       <Container>
         <Box sx={styles.contentBox}>
           <Box sx={styles.contentBoxInner}>
             <Heading as="h2" sx={styles.title}>
-              Subscribe to our Blog
+              Contact us
             </Heading>
-            <Text as="p" sx={styles.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
-              tempor incididunt labore dolore.
-            </Text>
-            <form onSubmit={subscribe}>
+            <Text as="p" sx={styles.description}> Send us a messasge</Text>
+            <form >
               <Flex sx={styles.subscribeForm}>
-                <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
-                  Email Address
-                </label>
-                <Input
-                  ref={inputEl}
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email address"
-                />
+                <label htmlFor="fullname" sx={{ variant: 'styles.srOnly' }}> Full Name </label>
+                <Input id="fullname" name="fullname" type="text" placeholder="Enter your Full Names" required value={fullname} onChange={(e) => {setFullname(e.target.value); }}/>
+              </Flex>
 
-                <div>
-                  {status.info.error && (
-                    <div className="error">Error: {status.info.msg}</div>
-                  )}
-                  {!status.info.error && status.info.msg && (
-                    <div className="success">{status.info.msg}</div>
-                  )}
-                </div>
+              <Flex sx={styles.subscribeForm}>
+                <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}> Email Address </label>
+                <Input id="email" name="email" type="email" placeholder="Enter your email address" required value={email} onChange={(e) => {setEmail(e.target.value); }}/>
+              </Flex>
+
+              <Flex sx={styles.subscribeForm}>
+                <label htmlFor="message" sx={{ variant: 'styles.srOnly' }}> Enter Message</label>
+
+                <textarea sx={styles.textarea} id="message" type="text" name="message" rows="7" cols="65" placeholder="Enter your message" required value={message} onChange={(e) => { setMessage(e.target.value); }}></textarea>
+              </Flex>
+
+              <Flex sx={styles.subscribeForm2}>
                 <Button
                   type="submit"
-                  disabled={status.submitting}
+                  onClick={(e)=>{handleSubmit(e)}}
                   className="subscribe__btn"
-                  aria-label="Subscribe"
-                >
-                  {!status.submitting
-                    ? !status.submitted
-                      ? 'Subscribe'
-                      : 'Submitted'
-                    : 'Submitting...'}
+                > 
+                Submit Message
                 </Button>
               </Flex>
+
             </form>
           </Box>
         </Box>
@@ -127,7 +90,7 @@ export default function Subscribe() {
 
 const styles = {
   contentBox: {
-    backgroundColor: 'primary',
+    backgroundColor: 'black',
     textAlign: 'center',
     borderRadius: 10,
     py: ['60px', null, 8],
@@ -144,7 +107,8 @@ const styles = {
     lineHeight: [1.3, null, null, 1.25],
     fontWeight: '700',
     letterSpacing: ['-.5px', null, '-1.5px'],
-    mb: [2, 3],
+    mb: [3, 5],
+    mt: [5, 8],
   },
   description: {
     fontSize: ['15px', 2, null, null, null, '17px', null, 3],
@@ -153,22 +117,85 @@ const styles = {
     px: [0, null, 5],
   },
   subscribeForm: {
-    mt: [6, null, null, 7],
-    backgroundColor: ['transparent', 'white'],
+    mt: [2, null, null, 2],
+    backgroundColor: ['transparent', 'black'],
+    borderRadius: [0, 10],
+    overflow: 'hidden',
+    p: [0, 1],
+    flexDirection: ['column', 'row'],
+    '[type="email","input"]': {
+      border: 0,
+      borderRadius: 50,
+      fontFamily: 'body',
+      fontSize: ['16px', null, 2],
+      fontWeight: 500,
+      color: 'black',
+      py: 1,
+      px: [4, null, 6],
+      backgroundColor: ['white', 'transparent'],
+      height: ['52px', null, '60px'],
+      textAlign: ['center', 'left'],
+      '&:focus': {
+        boxShadow: '0 0 0 0px',
+      },
+      '::placeholder': {
+        color: 'black',
+        opacity: 1,
+      },
+    },
+    '.subscribe__btn': {
+      flexShrink: 0,
+      ml: [0, 2],
+      backgroundColor: ['text', 'primary'],
+      mt: [2, 0],
+      py: ['15px'],
+    },
+  },
+  textarea: {
+    mt: [2, null, null, 2],
+    backgroundColor: ['transparent', 'black'],
+    borderRadius: [0, 10],
+    overflow: 'hidden',
+    borderColor: 'white',
+    p: [0, 1],
+    flexDirection: ['column', 'row'],
+    border: ['3px', 'solid', 'yellow'],
+    outlineStyle: 'solid',
+    outlineColor: 'white',
+    outlineWidth: '1px',
+    fontFamily: 'body',
+    fontSize: ['16px', null, 3],
+    fontWeight: 500,
+    color: 'white',
+    py: 1,
+    height: ['82px', null, '120px'],
+    textAlign: ['center', 'left'],
+    '&:focus': {
+      boxShadow: '0 0 0 0px',
+      outlineStyle: 'solid',
+      outlineColor: 'purple',
+      outlineWidth: '4px',
+      boxshadow: [0, 0, '10px', '#719ECE'],
+    },
+  },
+  subscribeForm2: {
+    mt: [2, null, null, 2],
+    backgroundColor: ['transparent', 'black'],
     borderRadius: [0, 50],
     overflow: 'hidden',
     p: [0, 1],
     flexDirection: ['column', 'row'],
     '[type="email"]': {
-      border: 0,
+      border: 1,
       borderRadius: 50,
+      borderColor: 'purple',
       fontFamily: 'body',
-      fontSize: ['14px', null, 2],
+      fontSize: ['20px', null, 2],
       fontWeight: 500,
       color: 'heading',
       py: 1,
       px: [4, null, 6],
-      backgroundColor: ['white', 'transparent'],
+      backgroundColor: ['black', 'transparent'],
       height: ['52px', null, '60px'],
       textAlign: ['center', 'left'],
       '&:focus': {
@@ -181,10 +208,12 @@ const styles = {
     },
     '.subscribe__btn': {
       flexShrink: 0,
-      ml: [0, 2],
       backgroundColor: ['text', 'primary'],
       mt: [2, 0],
       py: ['15px'],
+      justifyContent: 'center',
+      alignItems: 'center',
+      mx: 'auto',
     },
   },
 };

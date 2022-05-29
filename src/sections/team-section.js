@@ -63,13 +63,13 @@ const data = [
     socialProfile: [
 
       {
-        id: 2,
+        id: 1,
         name: 'twitter',
         path: '#',
         icon: <FaTwitter />,
       },
       {
-        id: 3,
+        id: 2,
         name: 'instagram',
         path: 'https://www.instagram.com/jwmos_nft/',
         icon: <FaInstagram />,
@@ -84,8 +84,8 @@ export default function TeamSection() {
     <section id="team-section">
       <Container>
         <SectionHeader
-          slogan="our team"
-          title="Connect with us on social media"
+          slogan="Our Team"
+          title="Connect With Us on Social Media"
         />
 
         <Grid sx={styles.grid}>

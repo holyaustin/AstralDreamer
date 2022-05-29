@@ -16,10 +16,6 @@ import menuItems from './header.data';
 const social = [
   {
     path: '/',
-    icon: <FaFacebookF />,
-  },
-  {
-    path: '/',
     icon: <FaTwitter />,
   },
   {
@@ -105,7 +101,7 @@ const styles = {
   drawer: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'dark',
+    backgroundColor: 'background',
   },
 
   close: {
