@@ -27,7 +27,7 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
           <br/> <br/><br/>
           </Text>
-          <a href="https://discord.gg/sP46VbawdS" target="_blank">
+          <a href="https://discord.gg/Jv78PKNgfq" target="_blank">
           <Button variant="primary">Join Community</Button>
           </a>      
         </Box>
