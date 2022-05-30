@@ -153,10 +153,10 @@ const styles = {
   textarea: {
     mt: [2, null, null, 2],
     backgroundColor: ['transparent', 'black'],
-    borderRadius: [5, 10],
+    borderRadius: [15, 10],
     overflow: 'hidden',
     borderColor: 'white',
-    p: [0, 1],
+    p: [3, 3],
     flexDirection: ['column', 'row'],
     border: ['3px', 'solid', 'purple'],
     outlineStyle: 'solid',

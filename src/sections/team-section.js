@@ -5,7 +5,7 @@ import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-import Member1 from 'assets/astradreamer/alex.webp';
+import Member1 from 'assets/astradreamer/alex2.png';
 import Member2 from 'assets/astradreamer/apolonia.webp';
 import Member3 from 'assets/astradreamer/james.webp';
 
