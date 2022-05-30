@@ -95,7 +95,7 @@ export default {
     news: {
       pb: [8, null, 9, null, null, 10, null, '170px'],
     },
-    coreFeature: {
+    about: {
       pb: [8, null, 9, null, null, 10, null, '30px'],
       overflow: 'hidden',
     },

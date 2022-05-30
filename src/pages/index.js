@@ -9,14 +9,14 @@ import KeyFeature from '../sections/key-feature';
 import ServiceSection from '../sections/service-section';
 import Feature from '../sections/feature';
 import MentalHealth from '../sections/mental-health';
-import CoreFeature from '../sections/core-feature';
+import About from '../sections/about';
 import Faq from '../sections/faq';
 import WorkFlow from '../sections/workflow';
 import Package from '../sections/package';
 import TeamSection from '../sections/team-section';
 import TestimonialCard from '../sections/testimonial';
 import BlogSection from '../sections/blog-section';
-import Subscribe from '../sections/subscribe';
+import Contactus from '../sections/contactus';
 
 export default function IndexPage() {
   return (
@@ -25,10 +25,10 @@ export default function IndexPage() {
         <Layout>
           <SEO title="Age of Astral Dreamers" />
           <Banner />
-          <CoreFeature />
+          <About />
           <TeamSection />
           <Faq />
-          <Subscribe />
+          <Contactus />
 
           {/**
           <KeyFeature />

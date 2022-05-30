@@ -21,7 +21,7 @@ const data = [
       {
         id: 2,
         name: 'twitter',
-        path: '#',
+        path: 'https://twitter.com/thenewllcdao?s=21&t=a7nweVVMPCdmRTi2aD0Hdg',
         icon: <FaTwitter />,
       },
       {
@@ -43,7 +43,7 @@ const data = [
       {
         id: 2,
         name: 'twitter',
-        path: '#',
+        path: 'https://twitter.com/artofficialapol?s=21&t=a7nweVVMPCdmRTi2aD0Hdg',
         icon: <FaTwitter />,
       },
       {
@@ -65,7 +65,7 @@ const data = [
       {
         id: 1,
         name: 'twitter',
-        path: '#',
+        path: 'https://twitter.com/jwmos4?s=21&t=a7nweVVMPCdmRTi2aD0Hdg',
         icon: <FaTwitter />,
       },
       {
@@ -85,7 +85,7 @@ export default function TeamSection() {
       <Container>
         <SectionHeader
           slogan="Our Team"
-          title="Connect With Us on Social Media"
+          title="Connect With Us On Social Media"
         />
 
         <Grid sx={styles.grid}>

@@ -33,11 +33,11 @@ export default function TextFeature({
       )}
 
       {btnName && (
-        <Link href={btnURL} variant="default">
+        <a href={btnURL} >
           <Button variant="primary" aria-label={btnName}>
             {btnName}
           </Button>
-        </Link>
+        </a>
       )}
     </Box>
   );
@@ -57,7 +57,7 @@ const styles = {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    mt: 10,
+    mt: 3,
     subTitle: {
       fontSize: [0, null, 1],
       color: 'primary',

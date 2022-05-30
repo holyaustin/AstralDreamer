@@ -4,7 +4,7 @@ export default [
     label: 'Home',
   },
   {
-    path: 'core-feature',
+    path: 'about',
     label: 'About',
   },
   {
@@ -16,7 +16,7 @@ export default [
     label: 'FAQ',
   },
   {
-    path: 'subscribe',
+    path: 'contactus',
     label: 'Contact Us',
   },
 ];

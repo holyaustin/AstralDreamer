@@ -22,16 +22,14 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-          <br/> 
+      
           </Heading>
           <Text as="p" variant="heroSecondary">
           <br/> <br/><br/>
           </Text>
           <a href="https://discord.gg/sP46VbawdS" target="_blank">
           <Button variant="primary">Join Community</Button>
-          </a>
-          <br/><br/><br/>
-         
+          </a>      
         </Box>
 
         <Box sx={styles.thumbnail}>
@@ -77,7 +75,7 @@ const playPluse = keyframes`
 const styles = {
   banner: {
     pt: ['60px', '60px', '65px', '71px', null, null, '74px', '83px'],
-    pb: [2, null, 0, null, 2, 0, null, 5],
+    pb: [0, null, 0, null, 2, 0, null, 5],
     position: 'relative',
     zIndex: 2,
     '&::before': {
@@ -117,7 +115,7 @@ const styles = {
       mx: 'auto',
       mt: '70px',
       textAlign: 'center',
-      mb: ['40px', null, null, null, null, 7],
+      mb: ['27px', null, null, null, null, 659],
     },
     imageBox: {
       justifyContent: 'center',
@@ -130,9 +128,6 @@ const styles = {
       },
     },
   },
-
-
-
 
   thumbnail: {
     mr: ['auto', null, null, 6, 60, 85],
@@ -198,7 +193,7 @@ const styles = {
   contentBox: {
     width: ['100%', null, null, 315, 390, 450, null, 500],
     flexShrink: 0,
-    mb: [2, null, 60, 0],
+    mb: [0, null, 60, 0],
     textAlign: ['center', null, null, 'left'],
   },
   grid: {

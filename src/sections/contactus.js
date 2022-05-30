@@ -5,7 +5,7 @@ import fetch from 'isomorphic-unfetch';
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Button, Input, Text, Heading } from 'theme-ui';
 
-export default function Subscribe() {
+export default function Contactus() {
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
   //const [subject, setSubject] = useState('')
@@ -44,12 +44,12 @@ export default function Subscribe() {
     };
 
   return (
-    <section id="subscribe">
+    <section id="contactus">
       <Container>
         <Box sx={styles.contentBox}>
           <Box sx={styles.contentBoxInner}>
             <Heading as="h2" sx={styles.title}>
-              Contact us
+              Contact Us
             </Heading>
             <Text as="p" sx={styles.description}> Send us a messasge</Text>
             <form >
@@ -173,12 +173,12 @@ const styles = {
       boxShadow: '0 0 0 0px',
       outlineStyle: 'solid',
       outlineColor: 'purple',
-      outlineWidth: '4px',
-      boxshadow: [0, 0, '10px', '#719ECE'],
+      outlineWidth: '1px',
+      boxshadow: [0, 0, '10px', 'purple'],
     },
   },
   subscribeForm2: {
-    mt: [2, null, null, 2],
+    mt: [5, null, null, 3],
     backgroundColor: ['transparent', 'black'],
     borderRadius: [0, 50],
     overflow: 'hidden',
