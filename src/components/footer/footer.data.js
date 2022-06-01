@@ -31,19 +31,19 @@ export default {
   ],
   menuItem: [
     {
-      path: '#',
+      path: 'home',
       label: 'Home',
     },
     {
-      path: '#',
+      path: 'about',
       label: 'About',
     },
     {
-      path: '#',
+      path: 'team-section',
       label: 'Team',
     },
     {
-      path: '#',
+      path: 'contactus',
       label: 'Contact',
     },
   ],

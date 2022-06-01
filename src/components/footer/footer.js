@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
-import { Link } from 'components/link';
+import { NavLink } from 'components/link';
+import { Link } from 'react-scroll';
 import data from './footer.data';
 import FooterLogo from 'assets/logo.svg';
 export default function Footer() {
@@ -24,18 +25,21 @@ export default function Footer() {
         </Grid>  */}
         {/* End of footer widgets area */}
         <Box sx={styles.footer.footerBottomArea}>
-          <Link path="/">
+          <NavLink path="/">
            {/** <Image src={FooterLogo} alt="Logo" />  */}
-          </Link>
+          </NavLink>
           <Box sx={styles.footer.menus}>
             <nav>
               {data.menuItem.map(({ path, label }, i) => (
                 <Link
-                  path={path}
+                  to={path}
                   key={i}
+                  smooth={true}
                   label={label}
                   sx={styles.footer.link}
-                />
+                >
+                  {label}
+                </Link>  
               ))}
             </nav>
           </Box>

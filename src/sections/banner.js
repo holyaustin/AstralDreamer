@@ -113,9 +113,10 @@ const styles = {
     contentBox: {
       width: ['100%', '90%', '535px', null, '57%', '60%', '68%', '60%'],
       mx: 'auto',
-      mt: '70px',
+      // mt: '70px',
+      mt: ['70px', null, null, null, null, 650],
       textAlign: 'center',
-      mb: ['27px', null, null, null, null, 659],
+      mb: ['27px', null, null, null, null, 59],
     },
     imageBox: {
       justifyContent: 'center',
