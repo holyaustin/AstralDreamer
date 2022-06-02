@@ -57,7 +57,7 @@ export const AccordionButton = ({ children, ...rest }) => (
 
 const variants = {
   open: {
-    // maxHeight: 200,
+    //maxHeight: 'auto',
     height: 'auto',
     marginBottom: 30,
   },
@@ -75,7 +75,7 @@ export function AccordionContents({ isOpen, ...props }) {
         paddingLeft: 32,
         lineHeight: '30px',
         color: '#fff',
-        '@media(min-width: 768px)': {
+        '@media(min-width: 1200x)': {
           paddingLeft: 45,
           lineHeight: '32px',
         },
@@ -93,8 +93,9 @@ export const AccordionItem = ({ isOpen, children, ...rest }) => (
       borderBottom: '1px solid #E5ECF4',
       padding: 0,
       overflow: 'hidden',
-      '@media(max-widht: 375px)': {
+      '@media(max-width: 375px)': {
         paddingBottom: 15,
+   
       },
     }}
     {...rest}

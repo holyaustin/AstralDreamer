@@ -27,8 +27,9 @@ export default function IndexPage() {
           <Banner />
           <About />
           <TeamSection />
-          <Faq />
+
           <Contactus />
+          <Faq />
 
           {/**
           <KeyFeature />

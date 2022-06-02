@@ -15,7 +15,7 @@ const data = [
     imgSrc: Member1,
     altText: 'Alexandra',
     title: 'Alexandra',
-    designation: 'Creative. Editorial, Community Manager, Problem Solver.',
+    designation: 'Creative. Editorial. Community Manager. Problem Solver.',
     socialProfile: [
 
       {
@@ -37,7 +37,7 @@ const data = [
     imgSrc: Member2,
     altText: 'Apolonia',
     title: 'Apolonia',
-    designation: 'Creative, Consultant, Engineer, Community Manager, Outreach/Research.',
+    designation: 'Creative. Consultant. Engineer. Community Manager. Outreach/Research.',
     socialProfile: [
 
       {

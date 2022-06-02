@@ -5,7 +5,7 @@ import BlockTitle from 'components/block-title';
 
 const accordionData = [
   {
-    isExpanded: false,
+    isExpanded: true,
     title: 'Why “Astral Dreamers?”',
     contents: (
       <div>
@@ -14,7 +14,7 @@ const accordionData = [
     ),
   },
   {
-    isExpanded: true,
+    isExpanded: false,
     title: 'Where can I buy?',
     contents: (
       <div>
@@ -62,8 +62,8 @@ const accordionData = [
 
 const FAQ = () => {
   return (
-    <section sx={{ variant: 'section.coreFeature' }} id="faq">
-    <Box as="section" id="faq" sx={styles.accordion}>
+    //<section sx={{ variant: 'section.faq' }} id="faq">
+    <Box id="faq" sx={styles.accordion}>
       <Container sx={styles.accordion.container}>
         <BlockTitle
           sx={styles.accordion.blockTitle}
@@ -73,7 +73,7 @@ const FAQ = () => {
         <Accordion items={accordionData} />
       </Container>
     </Box>
-    </section>
+   // </section>
   );
 };
 export default FAQ;
@@ -81,16 +81,16 @@ export default FAQ;
 const styles = {
   accordion: {
     container: {
-      maxWidth: '900px',
+      maxWidth: '1366px',
       alignItems: 'center',
       fontSize: 32,
       color: 'white',
       justifyContent: 'space-between',
-      pb: [0, 7, 0, null, 7],
+      pb: [0, 7, 0, null, 0],
       mt:10,
     },
     blockTitle: {
-      marginBottom: [25, null, null, 65],
+      marginBottom: [25, null, 25,null, 25,65, 65],
       textAlign: 'center',
       fontSize: 32,
       color: 'white',
