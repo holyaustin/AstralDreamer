@@ -156,7 +156,7 @@ const styles = {
     borderRadius: [15, 10],
     overflow: 'hidden',
     borderColor: 'white',
-    p: [3, 3],
+    p: [1, 2],
     flexDirection: ['column', 'row'],
     border: ['3px', 'solid', 'purple'],
     outlineStyle: 'solid',
