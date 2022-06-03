@@ -55,7 +55,7 @@ export default function Contactus() {
             <form >
               <Flex sx={styles.subscribeForm}>
                 <label htmlFor="fullname" sx={{ variant: 'styles.srOnly' }}> Full Name </label>
-                <Input id="fullname" name="fullname" type="text" placeholder="Enter your Full Names" required value={fullname} onChange={(e) => {setFullname(e.target.value); }}/>
+                <Input id="fullname" name="fullname" type="text" placeholder="Enter your full name" required value={fullname} onChange={(e) => {setFullname(e.target.value); }}/>
               </Flex>
 
               <Flex sx={styles.subscribeForm}>
