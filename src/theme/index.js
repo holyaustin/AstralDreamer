@@ -6,7 +6,6 @@ export default {
     heading: '#fff', // primary heading color
     heading_secondary: '#fff', // heading color
     background: '#000000', // body background color
-    //background: url("paper.gif"),
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
     yellow: '#FFA740', // border color
@@ -107,6 +106,7 @@ export default {
     services: {
       pb: ['90px', null, 9, null, null, 10, null, '150px'],
     },
+
     pricing: {
       pt: [8, null, 9, null, null, 10, null, '180px'],
       pb: ['90px', null, 9, null, null, 10, null, '180px'],

@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import BannerImg from 'assets/astradreamer/logo-final.png';
-import ShapeLeft from 'assets/astradreamer/cover.png';
+import ShapeLeft from 'assets/astradreamer/landingpage2.png';
 import ShapeRight from 'assets/shape-right.png';
 import ModalVideo from 'react-modal-video';
 import { IoIosPlay } from 'react-icons/io';

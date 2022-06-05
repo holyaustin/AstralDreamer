@@ -36,7 +36,7 @@ const styles = {
     borderRadius: '8px',
     position: 'relative',
     '&:hover': {
-      boxShadow: ['none', null, '0 4px 10px rgba(39, 83, 123, 0.12)'],
+      boxShadow: ['none', null, '0 20px 20px rgba(256, 256, 256, 0.52)'],
       '.info__name': {
         color: 'primary',
       },
@@ -47,7 +47,7 @@ const styles = {
         opacity: 1,
         a: {
           my: 0,
-          py: [0, null, 1],
+          py: [0, null, 0],
         },
       },
     },
@@ -96,7 +96,7 @@ const styles = {
       fontSize: [0, 1, null, 2],
       color: ['text', null, 'primary'],
       lineHeight: '1em',
-      my: [0, null, '-2px'],
+      my: [0, null, '2px'],
       px: 1,
       transition: 'all 0.25s',
       '&:hover': {
