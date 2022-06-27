@@ -8,6 +8,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Member1 from 'assets/astradreamer/alex2.png';
 import Member2 from 'assets/astradreamer/apolonia.webp';
 import Member3 from 'assets/astradreamer/james.webp';
+import Member4 from 'assets/astradreamer/augustine.png';
 
 const data = [
   {
@@ -19,17 +20,18 @@ const data = [
     socialProfile: [
 
       {
-        id: 2,
+        id: 1,
         name: 'twitter',
         path: 'https://twitter.com/thenewllcdao?s=21&t=a7nweVVMPCdmRTi2aD0Hdg',
         icon: <FaTwitter />,
       },
       {
-        id: 3,
+        id: 2,
         name: 'instagram',
         path: 'https://instagram.com/alexandra_creative?utm_medium=copy_link',
         icon: <FaInstagram />,
       },
+      
     ],
   },
   {
@@ -41,13 +43,13 @@ const data = [
     socialProfile: [
 
       {
-        id: 2,
+        id: 1,
         name: 'twitter',
         path: 'https://twitter.com/artofficialapol?s=21&t=a7nweVVMPCdmRTi2aD0Hdg',
         icon: <FaTwitter />,
       },
       {
-        id: 3,
+        id: 2,
         name: 'instagram',
         path: 'https://instagram.com/artofficialapol',
         icon: <FaInstagram />,
@@ -72,6 +74,28 @@ const data = [
         id: 2,
         name: 'instagram',
         path: 'https://www.instagram.com/jwmos_nft/',
+        icon: <FaInstagram />,
+      },
+    ],
+  },
+  {
+    id: 4,
+    imgSrc: Member4,
+    altText: 'Augustine',
+    title: 'Augustine',
+    designation: 'Blockchain Developer. Web Developer. Researcher. Renewable Energy Enthusiast.',
+    socialProfile: [
+
+      {
+        id: 1,
+        name: 'twitter',
+        path: 'https://twitter.com/holyaustin',
+        icon: <FaTwitter />,
+      },
+      {
+        id: 2,
+        name: 'instagram',
+        path: 'https://instagram.com/holyaustin',
         icon: <FaInstagram />,
       },
     ],
@@ -116,7 +140,7 @@ const styles = {
       null,
       'repeat(2,1fr)',
       null,
-      'repeat(3,1fr)',
+      'repeat(4,1fr)',
     ],
   },
 };
